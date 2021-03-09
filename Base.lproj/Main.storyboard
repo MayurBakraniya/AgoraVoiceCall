@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AYX-gc-AFi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--JoinCall-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AgoraVoiceCall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5c-Rx-TRC">
+                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qIV-0u-xxV">
+                                        <rect key="frame" x="100" y="20" width="214" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zV-3Y-MDc">
+                                                <rect key="frame" x="0.0" y="0.0" width="58" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="0xi-H3-Cfc"/>
+                                                    <constraint firstAttribute="width" constant="58" id="k6I-TH-gW0"/>
+                                                </constraints>
+                                                <state key="normal" image="btn_mute"/>
+                                                <connections>
+                                                    <action selector="didClickMuteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nui-Rs-WU0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWf-dK-Ofo">
+                                                <rect key="frame" x="78" y="0.0" width="58" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="A4j-1R-cDX"/>
+                                                    <constraint firstAttribute="width" constant="58" id="IEo-Lp-uWY"/>
+                                                </constraints>
+                                                <state key="normal" image="phone-call"/>
+                                                <connections>
+                                                    <action selector="didClickHangUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7QC-t8-Q0g"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QL1-34-6Zz">
+                                                <rect key="frame" x="156" y="0.0" width="58" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="A5A-NV-IaH"/>
+                                                    <constraint firstAttribute="width" constant="58" id="g9g-Ug-hfX"/>
+                                                </constraints>
+                                                <state key="normal" image="btn_speaker_blue"/>
+                                                <connections>
+                                                    <action selector="didClickSwitchSpeakerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FyJ-Nk-87t"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="qIV-0u-xxV" secondAttribute="bottom" constant="20" id="4zd-3f-e7d"/>
+                                    <constraint firstItem="qIV-0u-xxV" firstAttribute="centerX" secondItem="E5c-Rx-TRC" secondAttribute="centerX" id="A2g-rR-MDw"/>
+                                    <constraint firstItem="qIV-0u-xxV" firstAttribute="top" secondItem="E5c-Rx-TRC" secondAttribute="top" constant="20" id="Wyu-7L-XVT"/>
+                                    <constraint firstItem="qIV-0u-xxV" firstAttribute="centerY" secondItem="E5c-Rx-TRC" secondAttribute="centerY" id="jPZ-yd-bzp"/>
+                                    <constraint firstAttribute="height" constant="100" id="nuj-p7-X3n"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVp-mP-G4R">
+                                <rect key="frame" x="178" y="702" width="58" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="rLm-Dv-mS6"/>
+                                </constraints>
+                                <state key="normal" image="phone"/>
+                                <connections>
+                                    <action selector="joinChannel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uta-jF-XqM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jVp-mP-G4R" firstAttribute="trailing" secondItem="KWf-dK-Ofo" secondAttribute="trailing" id="2Zz-oa-1fc"/>
+                            <constraint firstItem="jVp-mP-G4R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B6N-09-FFb"/>
+                            <constraint firstItem="E5c-Rx-TRC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EmV-Ie-Ihg"/>
+                            <constraint firstItem="E5c-Rx-TRC" firstAttribute="top" secondItem="jVp-mP-G4R" secondAttribute="bottom" id="ErS-Tt-Lab"/>
+                            <constraint firstItem="jVp-mP-G4R" firstAttribute="leading" secondItem="KWf-dK-Ofo" secondAttribute="leading" id="SFa-sP-LZO"/>
+                            <constraint firstItem="E5c-Rx-TRC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hIu-rK-VG4"/>
+                            <constraint firstItem="E5c-Rx-TRC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hm2-6h-oKh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="JoinCall" id="vGa-zR-8RY"/>
+                    <connections>
+                        <outlet property="controlButtonsView" destination="E5c-Rx-TRC" id="d2X-Um-U7o"/>
+                        <outlet property="joinButton" destination="jVp-mP-G4R" id="YzP-8t-naf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1155" y="116"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="T81-ge-aCh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AYX-gc-AFi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JUD-4u-dXl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                        <color key="barTintColor" systemColor="systemTealColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Uns-Ga-QpQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CiF-eL-fSp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424.63768115942031" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_mute" width="40" height="40"/>
+        <image name="btn_speaker_blue" width="40" height="40"/>
+        <image name="phone" width="512" height="512"/>
+        <image name="phone-call" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
